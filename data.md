@@ -29,7 +29,7 @@
   export default {
     setup() {
       const counter = ref(0),
-            counterTitle = ref("Counter")
+          counterTitle = ref("Counter")
 
       const increment = () => {
         counter.value++
@@ -46,16 +46,26 @@
 
 ## Composition API (new version)
 
+You can choose using the ```ref()``` or ```reactive()``` function to create a reactive variable.
+Using ```ref()``` you **need** to use ```.value``` to access the value, using ```reactive()``` you don't need to
+use ```.value``` to access the value.
+
 ```vue
 
 <script setup>
-  import {ref} from "vue"
+  import {ref, reactive} from "vue"
 
   const counter = ref(0),
-        counterTitle = ref("Counter")
-  
+      counterTitle = ref("Counter")
+
+  const myVariables = reactive({
+    counter: 0,
+    title: "Counter"
+  })
+
   const increment = () => {
     counter.value++
+    myVariables.counter++
   }
 </script>
 ```
@@ -69,6 +79,7 @@ It's the same for all sintaxes
 <template>
   <div>
     <p>{{ counterTitle }}: {{ counter }}</p>
+    <p>{{ myVariables.title }}: {{ myVariables.counter }}</p>
     <button @click="increment">Increment</button>
   </div>
 </template>
