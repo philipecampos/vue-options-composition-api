@@ -1,52 +1,75 @@
 ## Options api
-```html
+
+```vue
 
 <script>
-    export default {
-        data() {
-            return {
-                contador: 0,
-            };
-        },
-        methods: {
-            incrementar() {
-                this.contador++
-            },
-        },
-    };
+  export default {
+    data() {
+      return {
+        counter: 0,
+        counterTitle: "Counter",
+      };
+    },
+    methods: {
+      increment() {
+        this.counter++
+      },
+    },
+  };
 </script>
 ```
 
-## Composition API (versão antiga)
-```html
+## Composition API (old version)
+
+```vue
+
 <script>
-  import { ref } from "vue"
-  
+  import {ref} from "vue"
+
   export default {
     setup() {
-      const contador = ref(0)
+      const counter = ref(0),
+            counterTitle = ref("Counter")
 
-      const incrementar = () => {
-        contador.value++
+      const increment = () => {
+        counter.value++
       }
 
       return {
-        contador,
-        incrementar
+        counter,
+        increment
       }
     }
   }
 </script>
 ```
 
-## Composition API (versão nova)
-```html
+## Composition API (new version)
+
+```vue
+
 <script setup>
-  import { ref } from "vue"
+  import {ref} from "vue"
+
+  const counter = ref(0),
+        counterTitle = ref("Counter")
   
-  const contador = ref(0)  
-  const incrementar = () => {
-    contador.value++
+  const increment = () => {
+    counter.value++
   }
 </script>
+```
+
+## Template
+
+It's the same for all sintaxes
+
+```vue
+
+<template>
+  <div>
+    <p>{{ counterTitle }}: {{ counter }}</p>
+    <button @click="increment">Increment</button>
+  </div>
+</template>
 ```
