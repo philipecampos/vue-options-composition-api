@@ -2,3 +2,5 @@
 
 ## Links
 - [Basic Sintaxe](basic.md)
+- [Data](data.md)
+- [Computed](computed.md)
