@@ -81,6 +81,8 @@ It's the same for all sintaxes
     <p>{{ counterTitle }}: {{ counter }}</p>
     <p>{{ myVariables.title }}: {{ myVariables.counter }}</p>
     <button @click="increment">Increment</button>
+    <input type="text" v-model="counterTitle">
+    <input type="text" v-model="myVariables.title">
   </div>
 </template>
 ```
