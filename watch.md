@@ -1,3 +1,5 @@
+## Options API
+
 ```vue
 
 <script>
@@ -21,6 +23,8 @@
   }
 </script>
 ```
+
+## Compostion API
 
 ```vue
 

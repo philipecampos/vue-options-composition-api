@@ -1,4 +1,4 @@
-## Options Api
+## Options API
 
 ```html
 
@@ -13,7 +13,7 @@
 </script>
 ```
 
-## Compostion Api
+## Compostion API
 
 ```html
 

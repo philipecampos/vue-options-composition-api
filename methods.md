@@ -1,3 +1,4 @@
+## Options API
 ```vue
 
 <script>
@@ -14,23 +15,28 @@
 </script>
 ```
 
+## Compostion API
+
 ```vue
+
 <script setup>
-    const printMessage = () => {
-        return "my result"
-    };
-    
-    const printSpecificMessage = (message) => {
-        return message
-    };
+  const printMessage = () => {
+    return "my result"
+  };
+
+  const printSpecificMessage = (message) => {
+    return message
+  };
 </script>
 ```
 
+## Template
 ```vue
+
 <template>
-    <div>
-        <p>{{ printMessage() }}</p>
-        <p>{{ printSpecificMessage("my result") }}</p>
-    </div>
+  <div>
+    <p>{{ printMessage() }}</p>
+    <p>{{ printSpecificMessage("my result") }}</p>
+  </div>
 </template>
 ```
