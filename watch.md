@@ -34,7 +34,7 @@
     console.log(newValue, oldValue);
   });
 
-  watch(form.name, (newValue, oldValue) => {
+  watch(() => form.name, (newValue, oldValue) => {
     console.log(newValue, oldValue);
   });
 </script>
