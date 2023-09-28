@@ -29,6 +29,8 @@
 ```vue
 
 <script setup>
+  import {ref, reactive, watch} from "vue"
+
   const counter = ref(0)
   const form = reactive({
     name: "",
